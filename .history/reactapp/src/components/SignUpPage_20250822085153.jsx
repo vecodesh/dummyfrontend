@@ -25,7 +25,7 @@ export const SignUpPage=()=>{
             password
         };
 
-        axios.post(`https://dummybackend-2cs8.onrender.com/user/add`,user,{
+        axios.post(`http://localhost:8080/user/add`,user,{
             headers:{
                 "Content-Type":"application/json"
             }

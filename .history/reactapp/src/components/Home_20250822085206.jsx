@@ -40,7 +40,7 @@ const toggleTheme = () => {
 
     useEffect(()=>{
         if(email!=="No email found"){
-            axios.get(`https://dummybackend-2cs8.onrender.com/user/get/id/${encodeURIComponent(email)}`)
+            axios.get(`http://localhost:8080/user/get/id/${encodeURIComponent(email)}`)
             .then((response)=>{
                 setId(response.data);
             })
@@ -80,7 +80,7 @@ const toggleTheme = () => {
                 isArchived,
                 path
             }
-   axios.post(`https://dummybackend-2cs8.onrender.com/doc/${encodeURIComponent(id)}/add`,doc,{
+   axios.post(`http://localhost:8080/doc/${encodeURIComponent(id)}/add`,doc,{
                 headers:{
                     "Content-Type":"application/json"
                 }

@@ -12,7 +12,7 @@ export const Login=()=>{
 
     const toHome=()=>{
         setLoading(true);
-        axios.get(`https://dummybackend-2cs8.onrender.com/user/get/email/${encodeURIComponent(email)}/${encodeURIComponent(password)}`)
+        axios.get(`http://localhost:8080/user/get/email/${encodeURIComponent(email)}/${encodeURIComponent(password)}`)
         .then((response)=>{
             if(response.data===true){
                 navigate('/',{state : {email}});

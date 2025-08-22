@@ -18,7 +18,7 @@ export const CreateFolder = ({ onclose, id , onCreate}) => {
             parentFolderId: null
         };
 
-        axios.post(`https://dummybackend-2cs8.onrender.com/folder/add/${encodeURIComponent(id)}`, folder, {
+        axios.post(`http://localhost:8080/folder/add/${encodeURIComponent(id)}`, folder, {
             headers: {
                 "Content-Type": "application/json"
             }

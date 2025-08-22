@@ -8,7 +8,7 @@ export const Document=({id,refresh})=>{
 
     useEffect(()=>{
         if(id){
-            axios.get(`https://dummybackend-2cs8.onrender.com/doc/get/${encodeURIComponent(id)}`)
+            axios.get(`http://localhost:8080/doc/get/${encodeURIComponent(id)}`)
             .then((response)=>{
                 setDocument(response.data||[]);
                 console.log("The document information has been successfully got");
@@ -20,7 +20,7 @@ export const Document=({id,refresh})=>{
     },[id,refresh]);
 
     const handleDelete=(docId)=>{
-        axios.delete(`https://dummybackend-2cs8.onrender.com/doc/del/${encodeURIComponent(docId)}`)
+        axios.delete(`http://localhost:8080/doc/del/${encodeURIComponent(docId)}`)
         .then((res)=>{
             console.log(res.data);
             setDocument((p)=>{

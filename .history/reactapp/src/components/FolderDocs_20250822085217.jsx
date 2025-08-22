@@ -13,7 +13,7 @@ export const FolderDocs=()=>{
     
     useEffect(()=>{
         if(id){
-            axios.get(`https://dummybackend-2cs8.onrender.com/folder/get/doc/${encodeURIComponent(id)}`)
+            axios.get(`http://localhost:8080/folder/get/doc/${encodeURIComponent(id)}`)
             .then((response)=>{
                 setDocument(response.data||[]);
                 console.log("The document information has been successfully got");
@@ -25,7 +25,7 @@ export const FolderDocs=()=>{
     },[id]);
 
     const handleRemoveFolder=(docId)=>{
-        axios.put(`https://dummybackend-2cs8.onrender.com/folder/removedoc/${encodeURIComponent(userId)}/${encodeURIComponent(docId)}`)
+        axios.put(`http://localhost:8080/folder/removedoc/${encodeURIComponent(userId)}/${encodeURIComponent(docId)}`)
         .then((res)=>{
             console.log("Removed folder");
             setDocument((p)=>{

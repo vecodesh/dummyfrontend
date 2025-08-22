@@ -37,7 +37,7 @@ export const Folder=({id,onMove,refresh})=>{
     }
     
     const handleDelete=(foldId)=>{
-        axios.delete(`https://dummybackend-2cs8.onrender.com/folder/del/${encodeURIComponent(foldId)}`)
+        axios.delete(`http://localhost:8080/folder/del/${encodeURIComponent(foldId)}`)
         .then((res)=>{
             console.log(res.data);
             setFolders((p)=>{
