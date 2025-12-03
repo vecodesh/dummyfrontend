@@ -36,7 +36,7 @@ const toggleTheme = () => {
 
         navigate('/',{replace : true});
     }
-    const upload = new Upload({ apiKey: "public_W23MTKdBuuqa5Py4Aga1ipCkyJ5P"});
+    const upload = new Upload({ apiKey: "public_G22nj4TBVq4nPT9J4LkKow2oBu3f"});
 
     useEffect(()=>{
         if(email!=="No email found"){
